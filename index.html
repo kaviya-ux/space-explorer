@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Explorer — A Tour of Our Solar System</title>
+<meta name="description" content="An educational, visual tour of the eight planets and the missions that reached them.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,500&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-nav">
+    <a href="#top" class="nav-brand">Space Explorer</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#planets">Planets</a>
+      <a href="#missions">Missions</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="starfield" aria-hidden="true"></div>
+
+    <div class="orbit-system" aria-hidden="true">
+      <div class="orbit orbit-1"><span class="orbit-dot"></span></div>
+      <div class="orbit orbit-2"><span class="orbit-dot"></span></div>
+      <div class="orbit orbit-3"><span class="orbit-dot"></span></div>
+      <div class="sun"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="eyebrow">A visual field guide</p>
+      <h1 class="hero-title">Explore the<br>Universe</h1>
+      <p class="hero-subtitle">Eight planets, one star, and the handful of missions bold enough to leave home. Scroll down and see how far we've traveled.</p>
+      <a href="#planets" class="cta-button">Explore Now</a>
+    </div>
+
+    <a href="#planets" class="scroll-cue" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============ PLANETS ============ -->
+  <section class="planets-section" id="planets">
+    <div class="section-heading">
+      <p class="eyebrow">01 — The Neighborhood</p>
+      <h2>Eight Worlds, In Order</h2>
+      <p class="section-lede">Each planet drawn in pure CSS, sized and colored to give a feel for what's actually out there — from the scorched rock closest to the sun to the icy giant at the edge of the map.</p>
+    </div>
+
+    <div class="planet-grid">
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet mercury"></div></div>
+        <h3>Mercury</h3>
+        <p>The fastest planet, and the closest — a cratered rock with almost no atmosphere to speak of.</p>
+        <span class="planet-meta">88 day orbit · No moons</span>
+      </article>
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet venus"></div></div>
+        <h3>Venus</h3>
+        <p>Wrapped in thick, reflective clouds, and hot enough to melt lead at the surface.</p>
+        <span class="planet-meta">225 day orbit · No moons</span>
+      </article>
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet earth"></div></div>
+        <h3>Earth</h3>
+        <p>The only known planet with liquid oceans, breathable air, and something to call it home.</p>
+        <span class="planet-meta">365 day orbit · 1 moon</span>
+      </article>
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet mars"></div></div>
+        <h3>Mars</h3>
+        <p>Rust-red and dry today, but its riverbeds hint at a much wetter past.</p>
+        <span class="planet-meta">687 day orbit · 2 moons</span>
+      </article>
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet jupiter"></div></div>
+        <h3>Jupiter</h3>
+        <p>The solar system's largest planet, banded in storms — including one older than any human record.</p>
+        <span class="planet-meta">12 year orbit · 95 moons</span>
+      </article>
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet saturn"><span class="ring"></span></div></div>
+        <h3>Saturn</h3>
+        <p>Famous for its rings — countless pieces of ice and rock caught in a perfect, thin halo.</p>
+        <span class="planet-meta">29 year orbit · 146 moons</span>
+      </article>
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet uranus"></div></div>
+        <h3>Uranus</h3>
+        <p>An ice giant that spins on its side, giving it the strangest seasons of any planet.</p>
+        <span class="planet-meta">84 year orbit · 28 moons</span>
+      </article>
+
+      <article class="planet-card">
+        <div class="planet-visual"><div class="planet neptune"></div></div>
+        <h3>Neptune</h3>
+        <p>The farthest planet from the sun, with the fastest winds ever recorded in the solar system.</p>
+        <span class="planet-meta">165 year orbit · 16 moons</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ MISSIONS TIMELINE ============ -->
+  <section class="missions-section" id="missions">
+    <div class="section-heading">
+      <p class="eyebrow">02 — The Journey So Far</p>
+      <h2>Missions That Left Earth</h2>
+      <p class="section-lede">A short timeline of the launches that turned the solar system from a diagram into a place we've actually visited.</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="timeline-item">
+        <span class="timeline-year">1957</span>
+        <div class="timeline-body">
+          <h3>Sputnik 1</h3>
+          <p>The first artificial satellite reaches orbit, and the space age formally begins.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1969</span>
+        <div class="timeline-body">
+          <h3>Apollo 11</h3>
+          <p>Neil Armstrong and Buzz Aldrin become the first humans to walk on the Moon.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1977</span>
+        <div class="timeline-body">
+          <h3>Voyager 1 &amp; 2</h3>
+          <p>Twin probes launch to tour the outer planets, and are still transmitting from interstellar space.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">1997</span>
+        <div class="timeline-body">
+          <h3>Mars Pathfinder</h3>
+          <p>The first rover, Sojourner, rolls across the Martian surface and sends back close-up images.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">2015</span>
+        <div class="timeline-body">
+          <h3>New Horizons</h3>
+          <p>After a nine-year journey, the probe returns the first clear photographs of Pluto.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">2021</span>
+        <div class="timeline-body">
+          <h3>James Webb Space Telescope</h3>
+          <p>The largest telescope ever launched begins capturing the deepest images of the universe yet taken.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ GALLERY / FOOTER ============ -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-heading">
+      <p class="eyebrow">03 — One Last Look</p>
+      <h2>The Whole System, At a Glance</h2>
+    </div>
+
+    <div class="gallery-strip" aria-hidden="true">
+      <div class="gallery-planet mercury"></div>
+      <div class="gallery-planet venus"></div>
+      <div class="gallery-planet earth"></div>
+      <div class="gallery-planet mars"></div>
+      <div class="gallery-planet jupiter"></div>
+      <div class="gallery-planet saturn"><span class="ring"></span></div>
+      <div class="gallery-planet uranus"></div>
+      <div class="gallery-planet neptune"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <span class="nav-brand">Space Explorer</span>
+      <p>Built with HTML &amp; CSS only, as a first step into web development.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="#top">Back to top</a>
+    </div>
+    <p class="footer-note">Made for learning. Distances and orbital periods are rounded for clarity.</p>
+  </footer>
+
+</body>
+</html>
