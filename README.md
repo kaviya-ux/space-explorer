@@ -1,5 +1,7 @@
 # 🚀 Space Explorer
 
+<img width="1897" height="936" alt="image" src="https://github.com/user-attachments/assets/ae1eeef1-0f01-4212-8f7c-100614998669" />
+
 A single-page, educational tour of our solar system — built with **only HTML and CSS**, no JavaScript or frameworks.
 
 ## Features
