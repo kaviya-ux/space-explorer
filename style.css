@@ -1,21 +1,7 @@
-/* =========================================================
-   SPACE EXPLORER — stylesheet
-   Token system
-   ---------------------------------------------------------
-   Color:
-     --bg-deep      #0B0E1A  near-black indigo, the base of space
-     --bg-panel     #12162A  slightly lifted panel surface
-     --bg-panel-2   #171C34  card surface, one step lighter
-     --accent-gold  #E8B34C  the sun / primary accent
-     --accent-coral #E8613F  Mars-red / CTA & interaction accent
-     --text-primary #F3F1EA  starlight white
-     --text-muted   #9BA0C6  dusty lavender-blue for secondary text
-     --line         #262C4C  hairline dividers on dark
-   Type:
-     display  "Fraunces"        headlines — warm, slightly wonky serif
-     body     "Sora"            paragraphs, UI text
-     mono     "JetBrains Mono"  labels, eyebrows, data
-   ========================================================= */
+/* space explorer - stylesheet
+   keeping all my colors as variables up top so i only have to change them in one place
+   picked a dark navy/indigo bg since it actually looks like space instead of just using black,
+   gold for the sun/accent and a coral-ish red for buttons so they pop against the dark bg */
 
 :root {
   --bg-deep: #0B0E1A;
@@ -57,6 +43,7 @@ ul, ol { list-style: none; }
 
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.1; }
 
+/* turns off animations for people who have that setting on, saw this in an accessibility article */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -98,9 +85,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   font-size: 1.02rem;
 }
 
-/* =========================================================
-   NAV
-   ========================================================= */
+/* nav */
 .site-nav {
   position: sticky;
   top: 0;
@@ -137,9 +122,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 .nav-links a:hover { color: var(--text-primary); }
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* hero section */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -151,7 +134,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   text-align: center;
 }
 
-/* Starfield: layered radial-gradient dots, no images needed */
+/* stars are just a bunch of tiny radial-gradient dots stacked on top of each other,
+   found this trick online, way easier than trying to find/make a starfield image */
 .starfield {
   position: absolute;
   inset: 0;
@@ -300,9 +284,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   50% { opacity: 1; }
 }
 
-/* =========================================================
-   PLANETS
-   ========================================================= */
+/* planet cards section */
 .planets-section {
   padding: 120px 0 100px;
 }
@@ -347,7 +329,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 .planet-card:hover .planet { transform: scale(1.08); }
 
-/* Each planet: a base size + a radial-gradient for spherical shading */
+/* no planet images, just radial-gradient circles with the light coming from the top-left corner
+   to fake a bit of a 3d sphere look. took some trial and error to get colors close to the real thing */
 .mercury { width: 34px; height: 34px; background: radial-gradient(circle at 32% 30%, #C9C0B4, #8B8377 65%, #5F594F); }
 .venus   { width: 46px; height: 46px; background: radial-gradient(circle at 32% 30%, #F1D9AE, #D9A868 65%, #A97A44); }
 .earth   { width: 48px; height: 48px; background: radial-gradient(circle at 32% 30%, #6FB8E8, #3E7CB1 55%, #2C5484 80%, #3B7D4E); }
@@ -391,9 +374,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   width: 100%;
 }
 
-/* =========================================================
-   MISSIONS TIMELINE
-   ========================================================= */
+/* missions timeline */
 .missions-section {
   padding: 100px 0;
   background: var(--bg-panel);
@@ -458,9 +439,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   max-width: 480px;
 }
 
-/* =========================================================
-   GALLERY
-   ========================================================= */
+/* gallery strip near the bottom */
 .gallery-section {
   padding: 100px 0 60px;
 }
@@ -491,9 +470,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .gallery-planet.uranus  { width: 40px; height: 40px; background: radial-gradient(circle at 32% 30%, #B9EEEF, #7FCDCF 60%, #4E9C9E); }
 .gallery-planet.neptune { width: 40px; height: 40px; background: radial-gradient(circle at 32% 30%, #7C9FE0, #3B5BA6 60%, #253E78); }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* footer */
 .site-footer {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -538,9 +515,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   opacity: 0.7;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* media queries - tested these on my phone and kept tweaking till it stopped looking cramped */
 @media (max-width: 960px) {
   .planet-grid { grid-template-columns: repeat(3, 1fr); }
 }
